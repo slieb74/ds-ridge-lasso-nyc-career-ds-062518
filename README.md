@@ -28,7 +28,7 @@ import numpy as np
 ```python
 def ridge_loss(y, y_hat, coeff_weights, lam = 0.8):
     #Your code here
-    return l2_err
+    return None
 ```
 
 ## 2. Lasso (L1)
@@ -42,7 +42,7 @@ Write this loss function for performing ridge regression.
 ```python
 def lasso_loss(y, y_hat, coeff_weights, lam = 0.8):
     #Your code here
-    return l1_err
+    return None
 ```
 
 ## 3. Run + Compare your Results
@@ -64,6 +64,99 @@ df.head()
 ```
 
 
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>budget</th>
+      <th>domgross</th>
+      <th>title</th>
+      <th>Response_Json</th>
+      <th>Year</th>
+      <th>imdbRating</th>
+      <th>Metascore</th>
+      <th>imdbVotes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>13000000</td>
+      <td>25682380</td>
+      <td>21 &amp;amp; Over</td>
+      <td>0</td>
+      <td>2008</td>
+      <td>6.8</td>
+      <td>48</td>
+      <td>206513</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>45658735</td>
+      <td>13414714</td>
+      <td>Dredd 3D</td>
+      <td>0</td>
+      <td>2012</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20000000</td>
+      <td>53107035</td>
+      <td>12 Years a Slave</td>
+      <td>0</td>
+      <td>2013</td>
+      <td>8.1</td>
+      <td>96</td>
+      <td>537525</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>61000000</td>
+      <td>75612460</td>
+      <td>2 Guns</td>
+      <td>0</td>
+      <td>2013</td>
+      <td>6.7</td>
+      <td>55</td>
+      <td>173726</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>40000000</td>
+      <td>95020213</td>
+      <td>42</td>
+      <td>0</td>
+      <td>2013</td>
+      <td>7.5</td>
+      <td>62</td>
+      <td>74170</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
 ```python
 from sklearn.linear_model import Lasso, Ridge, LinearRegression
 from sklearn.model_selection import train_test_split
@@ -74,16 +167,16 @@ from sklearn.model_selection import train_test_split
 
 #Fill in the appropriate RSS Train and Test Equations below.
 
-print('Train Error  Ridge Model', #RSS Ridge Train)
-print('Test Error Ridge Model', #RSS Ridge Test)
-print('\n')
+# print('Train Error  Ridge Model', #RSS Ridge Train)
+# print('Test Error Ridge Model', #RSS Ridge Test)
+# print('\n')
 
-print('Train Error Lasso Model', #RSS Lasso Train)
-print('Test Error Lasso Model', #RSS Lasso Test)
-print('\n')
+# print('Train Error Lasso Model', #RSS Lasso Train)
+# print('Test Error Lasso Model', #RSS Lasso Test)
+# print('\n')
 
-print('Train Error Unpenalized Linear Model', #RSS Unpenalized Train)
-print('Test Error Unpenalized  Linear Model', #RSS Unpenalized Test)
+# print('Train Error Unpenalized Linear Model', #RSS Unpenalized Train)
+# print('Test Error Unpenalized  Linear Model', #RSS Unpenalized Test)
 ```
 
 # Altering Alpha
@@ -104,3 +197,7 @@ optimal_lasso_alpha = 0
 print('Minimum Ridge Test RSS: {}, Best alpha: {}'.format(min_test_error_ridge, optimal_ridge_alpha))
 print('Minimum Lasso Test RSS: {}, Best alpha: {}'.format(min_test_error_lasso, optimal_lasso_alpha))
 ```
+
+    Minimum Ridge Test RSS: [], Best alpha: 0
+    Minimum Lasso Test RSS: [], Best alpha: 0
+
