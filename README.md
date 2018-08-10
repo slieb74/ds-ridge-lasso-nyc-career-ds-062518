@@ -204,16 +204,16 @@ print('Train Error Unpenalized Linear Model', rss(y_train - lin_reg.predict(X_tr
 print('Test Error Unpenalized  Linear Model', rss(y_test - lin_reg.predict(X_test)))
 ```
 
-    Train Error  Ridge Model 6.37432771143147e+16
-    Test Error Ridge Model 1.3218369705684102e+17
+    Train Error  Ridge Model 1.0705617558826253e+17
+    Test Error Ridge Model 6.095781681848846e+16
     
     
-    Train Error Lasso Model 6.3743249208146216e+16
-    Test Error Lasso Model 1.321353862882378e+17
+    Train Error Lasso Model 1.0705355940224341e+17
+    Test Error Lasso Model 6.105577956427409e+16
     
     
-    Train Error Unpenalized Linear Model 6.374324920814621e+16
-    Test Error Unpenalized  Linear Model 1.321353852598148e+17
+    Train Error Unpenalized Linear Model 1.0705355940224341e+17
+    Test Error Unpenalized  Linear Model 6.1055779723063096e+16
 
 
 
@@ -267,6 +267,6 @@ print('Minimum Ridge Test RSS: {}, Best alpha: {}'.format(min_test_error_ridge, 
 print('Minimum Lasso Test RSS: {}, Best alpha: {}'.format(min_test_error_lasso, optimal_lasso_alpha))
 ```
 
-    Minimum Ridge Test RSS: 1.321403225572795e+17, Best alpha: 0.1
-    Minimum Lasso Test RSS: 1.3213538536266008e+17, Best alpha: 0.1
+    Minimum Ridge Test RSS: 6.081818824821337e+16, Best alpha: 2.5
+    Minimum Lasso Test RSS: 6.105577932632072e+16, Best alpha: 2.5
 
